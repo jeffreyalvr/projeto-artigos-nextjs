@@ -9,7 +9,7 @@ const Home = () => {
       <ArtigosPostados />
       <Link
         href="/criar"
-        className="px-4 py-2 rounded-lg text-center bg-sky-800 text-white hover:opacity-85"
+        className="px-4 py-2 rounded-lg text-center bg-black text-white hover:opacity-85"
       >
         Novo artigo
       </Link>

@@ -10,7 +10,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           title="Clique para abrir o meu GitHub"
-          className="text-sky-600 hover:opacity-85 hover:underline"
+          className="text-gray-600 hover:underline"
         >
           @jeffreyalvr
         </Link>
