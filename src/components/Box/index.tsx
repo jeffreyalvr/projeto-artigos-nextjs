@@ -10,7 +10,9 @@ const Box = ({
       <h1 className="text-3xl text-sky-700 font-bold border-b-2 border-slate-100 py-4 mb-4">
         {title}
       </h1>
-      {children ? <div>{children}</div> : null}
+      <div className="flex flex-col gap-10 w-full">
+        {children ? children : null}
+      </div>
     </div>
   );
 };
