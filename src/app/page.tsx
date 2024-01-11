@@ -15,7 +15,7 @@ const Home = async () => {
   const artigos = await getArtigos();
   return (
     <Box title="Artigos postados">
-      <ArtigosPostados />
+      <ArtigosPostados listaArtigos={artigos} />
       <Link
         href="/criar"
         className="px-4 py-2 rounded-lg text-center bg-black text-white hover:opacity-85"

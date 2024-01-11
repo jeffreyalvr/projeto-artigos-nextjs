@@ -1,17 +1,15 @@
 import Link from "next/link";
 
-const ArtigosPostados = () => {
-  interface Artigo {
-    id: number;
-    title: string;
-  }
+interface Artigo {
+  id: number;
+  title: string;
+}
 
-  const artigos: Array<Artigo> = [];
-
+const ArtigosPostados = ({ listaArtigos }: { listaArtigos: Array<Artigo> }) => {
   return (
     <div className="flex flex-col gap-1">
-      {artigos.length > 0 ? (
-        artigos.map((artigo: Artigo) => (
+      {listaArtigos.length > 0 ? (
+        listaArtigos.map((artigo: Artigo) => (
           <Link
             href={`/${artigo.id}`}
             key={artigo.id}
