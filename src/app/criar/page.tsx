@@ -28,6 +28,7 @@ const Criar = () => {
             name="title"
             placeholder="Como o artigo se chama?"
             required
+            maxLength={155}
             className="border p-2 rounded-lg"
           />
           <label htmlFor="content">Conteúdo</label>
