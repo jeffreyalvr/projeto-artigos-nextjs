@@ -11,7 +11,7 @@ const ArtigosPostados = ({ listaArtigos }: { listaArtigos: Array<Artigo> }) => {
       {listaArtigos.length > 0 ? (
         listaArtigos.map((artigo: Artigo) => (
           <Link
-            href={`/${artigo.id}`}
+            href={`/artigo/${artigo.id}`}
             key={artigo.id}
             title="Clique par ler o artigo"
             className="hover:opacity-85 hover:underline"
