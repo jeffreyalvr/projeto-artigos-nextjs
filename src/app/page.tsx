@@ -1,9 +1,18 @@
+import { prisma } from "@/db";
+import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
 import Box from "../components/Box";
 import ArtigosPostados from "../components/ArtigosPostados";
 
-const Home = () => {
+const Home = async () => {
+  const getArtigos = async () => {
+    "use server";
+    revalidatePath("/");
+    return prisma.artigo.findMany();
+  };
+
+  const artigos = await getArtigos();
   return (
     <Box title="Artigos postados">
       <ArtigosPostados />
