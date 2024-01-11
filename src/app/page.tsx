@@ -2,8 +2,8 @@ import { prisma } from "@/db";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
-import Box from "../components/Box";
-import ArtigosPostados from "../components/ArtigosPostados";
+import Box from "@/components/Box";
+import ArtigosPostados from "@/components/ArtigosPostados";
 
 const Home = async () => {
   const getArtigos = async () => {

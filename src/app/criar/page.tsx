@@ -2,7 +2,7 @@ import { prisma } from "@/db";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 
-import Box from "../../components/Box";
+import Box from "@/components/Box";
 import SubmitButton from "@/app/criar/components/SubmitButton";
 
 const Criar = () => {
