@@ -25,39 +25,50 @@ const Home = async () => {
   const tituloFormatadoParaURL = getTituloFormatadoParaURL();
   const descricaoParaCompartilhamento = `Venha%20ler%20o%20meu%20post%20"${tituloFormatadoParaURL}"%20no%20site%20${url}`;
   return (
-    <Box
-      title={artigo?.title}
-      subtitle={`postado em ${artigo?.createdAt.toLocaleString()}`}
-    >
-      <article>{artigo?.content}</article>
-      <footer className="flex flex-row gap-2 border-t pt-6">
-        <span className="text-gray-500">Compartilhar:</span>
+    <>
+      <div className="mb-4">
         <Link
-          href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
-          className="hover:underline"
+          href="/"
+          title="Voltar a homepage"
+          className="px-4 py-2 rounded-lg text-center bg-black text-white hover:opacity-85"
         >
-          Facebook
+          Voltar a homepage
         </Link>
-        <Link
-          href={`https://api.whatsapp.com/send?text=${descricaoParaCompartilhamento}`}
-          className="hover:underline"
-        >
-          WhatsApp
-        </Link>
-        <Link
-          href={`https://t.me/share/url?url=${url}&text=${descricaoParaCompartilhamento}`}
-          className="hover:underline"
-        >
-          Telegram
-        </Link>
-        <Link
-          href={`https://twitter.com/intent/tweet?text=${descricaoParaCompartilhamento}`}
-          className="hover:underline"
-        >
-          X
-        </Link>
-      </footer>
-    </Box>
+      </div>
+      <Box
+        title={artigo?.title}
+        subtitle={`postado em ${artigo?.createdAt.toLocaleString()}`}
+      >
+        <article>{artigo?.content}</article>
+        <footer className="flex flex-row gap-2 border-t pt-6">
+          <span className="text-gray-500">Compartilhar:</span>
+          <Link
+            href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
+            className="hover:underline"
+          >
+            Facebook
+          </Link>
+          <Link
+            href={`https://api.whatsapp.com/send?text=${descricaoParaCompartilhamento}`}
+            className="hover:underline"
+          >
+            WhatsApp
+          </Link>
+          <Link
+            href={`https://t.me/share/url?url=${url}&text=${descricaoParaCompartilhamento}`}
+            className="hover:underline"
+          >
+            Telegram
+          </Link>
+          <Link
+            href={`https://twitter.com/intent/tweet?text=${descricaoParaCompartilhamento}`}
+            className="hover:underline"
+          >
+            X
+          </Link>
+        </footer>
+      </Box>
+    </>
   );
 };
 
