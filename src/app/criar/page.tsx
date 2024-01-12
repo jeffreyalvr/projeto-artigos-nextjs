@@ -40,7 +40,7 @@ const Criar = () => {
             className="border p-2 rounded-lg"
           />
         </div>
-        <div className="flex flex-col gap-1 w-full justify-end sm:flex-row">
+        <div className="flex flex-col gap-2 w-full justify-end sm:flex-row">
           <Link
             href="/"
             className="px-4 py-2 rounded-lg text-center bg-white border border-slate-300 text-black hover:bg-gray-100"

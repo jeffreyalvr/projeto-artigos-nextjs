@@ -8,7 +8,7 @@ const Box = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="rounded-lg border-2 border-slate-200 p-8">
+    <div className="border-2 border-slate-200 p-8 sm:rounded-lg">
       <header className="border-b pb-6 mb-6">
         <h1 className="text-3xl text-black font-bold">{title}</h1>
         {subtitle ? (

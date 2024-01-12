@@ -26,11 +26,11 @@ const Home = async () => {
   const descricaoParaCompartilhamento = `Venha%20ler%20o%20meu%20post%20"${tituloFormatadoParaURL}"%20no%20site%20${url}`;
   return (
     <>
-      <div className="mb-4">
+      <div className="flex flex-row justify-center my-4 sm:justify-start sm:mb-4">
         <Link
           href="/"
           title="Voltar a homepage"
-          className="px-4 py-2 rounded-lg text-center bg-black text-white hover:opacity-85"
+          className="inline-flex px-4 py-2 rounded-lg text-center bg-black text-white hover:opacity-85"
         >
           Voltar a homepage
         </Link>
@@ -40,7 +40,7 @@ const Home = async () => {
         subtitle={`postado em ${artigo?.createdAt.toLocaleString()}`}
       >
         <article>{artigo?.content}</article>
-        <footer className="flex flex-row gap-2 border-t pt-6">
+        <footer className="flex flex-row flex-wrap gap-2 border-t pt-6">
           <span className="text-gray-500">Compartilhar:</span>
           <Link
             href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
