@@ -14,7 +14,7 @@ const Home = async () => {
 
   const artigos = await getArtigos();
   return (
-    <Box title="Artigos postados">
+    <Box title="Artigos postados" subtitle="Em ordem de última postagem">
       <ArtigosPostados listaArtigos={artigos} />
       <Link
         href="/criar"
