@@ -20,7 +20,7 @@ _a ser adicionado futuramente_
 ## Acesso direto ao projeto em produção
 
 Para testar o projeto em produção, acesse o seguinte link hospedado na plataforma Vercel:
-https://projeto-artigos-nextjs.vercel.app/https://projeto-artigos-nextjs.vercel.app/
+https://projeto-artigos-nextjs.vercel.app
 
 ## Acesso por meio de instalação local
 
