@@ -1,9 +1,12 @@
 import { prisma } from "@/db";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
+import Image from "next/image";
 
 import Box from "@/components/Box";
 import Footer from "./components/Footer";
+
+import back_img from "/public/icons/back.png";
 
 const Home = async () => {
   const getArtigoPorId = async (id: number) => {
@@ -31,8 +34,15 @@ const Home = async () => {
         <Link
           href="/"
           title="Voltar a homepage"
-          className="inline-flex px-4 py-2 rounded-lg text-center bg-black text-white hover:opacity-85"
+          className="flex flex-row gap-2 px-4 py-2 rounded-lg text-center bg-black text-white hover:opacity-85"
         >
+          <Image
+            src={back_img}
+            width="24"
+            height="24"
+            alt="Facebook"
+            title="Voltar"
+          />
           Voltar a homepage
         </Link>
       </div>
