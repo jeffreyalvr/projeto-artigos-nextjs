@@ -8,11 +8,12 @@ import Footer from "./components/Footer";
 
 import back_img from "/public/icons/back.png";
 
-const Home = async () => {
-  const getArtigoPorId = async (id: number) => {
-    "use server";
+const Artigo = async ({ params }: { params: { id: number } }) => {
+  const { id } = params;
+
+  const getArtigoPorId = async (productId: number) => {
     revalidatePath("/");
-    return prisma.artigo.findUnique({ where: { id } });
+    return prisma.artigo.findUnique({ where: { id: productId } });
   };
 
   const getTituloFormatadoParaURL = () => {
@@ -21,9 +22,8 @@ const Home = async () => {
     return artigo.title.trim().replace(/ /g, "%20").toString();
   };
 
-  const artigo = await getArtigoPorId(1);
+  const artigo = await getArtigoPorId(Number(id));
 
-  // TEMPORARY: adicionar url dinâmica posteriormente
   const url = `https://projeto-artigos-nextjs.vercel.app/artigo/${artigo?.id}`;
 
   const tituloFormatadoParaURL = getTituloFormatadoParaURL();
@@ -60,4 +60,4 @@ const Home = async () => {
   );
 };
 
-export default Home;
+export default Artigo;
